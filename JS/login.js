@@ -43,6 +43,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (googleBtn) {
     googleBtn.addEventListener('click', async function () {
+      if (googleBtn.disabled) return;
+      googleBtn.disabled = true;
       try {
         const provider = new GoogleAuthProvider();
         const result = await signInWithPopup(auth, provider);
@@ -55,10 +57,16 @@ document.addEventListener('DOMContentLoaded', function () {
           const origin = window.location.origin || (window.location.protocol + '//' + window.location.host);
           if (err && err.code === 'auth/unauthorized-domain') {
             msg.innerHTML = 'Sign-in blocked: unauthorized domain. Your current origin is <strong>' + origin + '</strong>.<br>Add this origin (or 127.0.0.1) under <em>Authorized domains</em> in the Firebase console (Authentication → Sign-in method → Authorized domains) and add the exact origin in your OAuth client allowed origins.';
+          } else if (err && err.code === 'auth/popup-blocked') {
+            msg.innerHTML = 'Sign-in blocked by your browser (popup blocked). Allow popups for this site or try again.';
+          } else if (err && err.code === 'auth/cancelled-popup-request') {
+            msg.textContent = 'Sign-in cancelled (popup request was cancelled). Please try again.';
           } else {
             msg.textContent = 'Google sign-in failed: ' + (err.message || err.code || 'unknown error');
           }
         }
+      } finally {
+        googleBtn.disabled = false;
       }
     });
   }

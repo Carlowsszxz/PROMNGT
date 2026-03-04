@@ -69,6 +69,9 @@ if (form) {
 
 if (googleBtn) {
     googleBtn.addEventListener('click', async function () {
+        // prevent double clicks / multiple popups
+        if (googleBtn.disabled) return;
+        googleBtn.disabled = true;
         try {
             const provider = new GoogleAuthProvider();
             const result = await signInWithPopup(auth, provider);
@@ -90,10 +93,16 @@ if (googleBtn) {
             if (msgEl) {
                 if (err && err.code === 'auth/unauthorized-domain') {
                     msgEl.innerHTML = 'Sign-in blocked: unauthorized domain. Serve the app over HTTP(S) (not file://) and add <strong>localhost</strong> (or your host) to <em>Authorized domains</em> in the Firebase console (Authentication → Sign-in method → Authorized domains).';
+                } else if (err && err.code === 'auth/popup-blocked') {
+                    msgEl.innerHTML = 'Sign-in blocked by your browser (popup blocked). Allow popups for this site or try again. If you see this on Vercel/custom domain, ensure the origin is added to Firebase/Google OAuth.';
+                } else if (err && err.code === 'auth/cancelled-popup-request') {
+                    msgEl.textContent = 'Sign-in cancelled (popup request was cancelled). Please try again.';
                 } else {
                     msgEl.textContent = 'Google sign-up failed: ' + (err.message || err.code || 'unknown error');
                 }
             }
+        } finally {
+            googleBtn.disabled = false;
         }
     });
 }
