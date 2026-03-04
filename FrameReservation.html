@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Make a Reservation</title>
+  <link rel="stylesheet" href="CSS/frames.css">
+  <link rel="stylesheet" href="CSS/reservation.css">
+</head>
+<body>
+  <div class="reservation-page">
+    <header>
+      <h1>Reserve a Resource</h1>
+      <p class="small-muted">Select type, resource, date and time, then check availability.</p>
+    </header>
+
+    <main class="reservation-card">
+      <form id="reservationForm">
+        <label for="resType">Resource Type</label>
+        <select id="resType" required>
+          <option value="parking">Parking</option>
+          <option value="seat">Seat</option>
+          <option value="room">Room</option>
+        </select>
+
+        <label for="resSelect">Resource</label>
+        <select id="resSelect" required>
+          <!-- populated by JS -->
+        </select>
+
+        <div class="row">
+          <div>
+            <label for="resDate">Date</label>
+            <input type="date" id="resDate" required>
+          </div>
+          <div>
+            <label for="resTime">Time</label>
+            <input type="time" id="resTime" required>
+          </div>
+        </div>
+
+        <div class="actions-row">
+          <button type="button" id="checkAvailability" class="btn btn-secondary">Check Availability</button>
+          <button type="submit" class="btn btn-primary">Confirm Reservation</button>
+        </div>
+
+        <div id="statusArea" class="status-area" aria-live="polite"></div>
+      </form>
+    </main>
+  </div>
+
+  <script src="JS/reservation.js"></script>
+</body>
+</html>

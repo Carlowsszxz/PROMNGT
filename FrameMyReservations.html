@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>My Reservations</title>
+  <link rel="stylesheet" href="CSS/frames.css">
+  <link rel="stylesheet" href="CSS/myreservations.css">
+</head>
+<body>
+  <div class="my-reservations">
+    <header>
+      <h1>My Reservations</h1>
+      <p class="small-muted">Manage your upcoming, active and past reservations.</p>
+    </header>
+
+    <section class="summary-row">
+      <div class="summary-item">Upcoming: <span id="countUpcoming">0</span></div>
+      <div class="summary-item">Active: <span id="countActive">0</span></div>
+      <div class="summary-item">Past: <span id="countPast">0</span></div>
+    </section>
+
+    <section class="lists-grid">
+      <div class="list-panel">
+        <h3>Active</h3>
+        <ul id="activeList" class="res-list"></ul>
+        <p id="noActive" class="small-muted">No active reservations.</p>
+      </div>
+
+      <div class="list-panel">
+        <h3>Upcoming</h3>
+        <ul id="upcomingList" class="res-list"></ul>
+        <p id="noUpcoming" class="small-muted">No upcoming reservations.</p>
+      </div>
+
+      <div class="list-panel full">
+        <h3>Past / Cancelled</h3>
+        <ul id="pastList" class="res-list"></ul>
+        <p id="noPast" class="small-muted">No past reservations.</p>
+      </div>
+    </section>
+  </div>
+
+  <script src="JS/myreservations.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+/* Reservation form styles */
+.reservation-page{max-width:820px;margin:28px auto;padding:18px}
+.reservation-card{background:#fff;padding:18px;border-radius:10px;box-shadow:0 10px 30px rgba(2,6,23,0.06)}
+.reservation-card label{display:block;margin-top:10px;font-size:14px;color:#0f172a}
+.reservation-card select,input{width:100%;padding:10px;border-radius:8px;border:1px solid #e6e9ef;margin-top:6px}
+.row{display:flex;gap:12px;margin-top:8px}
+.row > div{flex:1}
+.actions-row{display:flex;gap:10px;margin-top:14px}
+.status-area{margin-top:12px;padding:10px;border-radius:8px;background:rgba(15,23,42,0.03);min-height:40px}
+.status-success{background:rgba(16,185,129,0.08);border-left:4px solid #10b981;color:#065f46;padding:10px}
+.status-warning{background:rgba(245,158,11,0.06);border-left:4px solid #f59e0b;color:#92400e;padding:10px}
+.status-error{background:rgba(239,68,68,0.06);border-left:4px solid #ef4444;color:#7f1d1d;padding:10px}
+
+@media(max-width:640px){.row{flex-direction:column}}

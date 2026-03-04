@@ -1,0 +1,62 @@
+/* Login page styles */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg, #eef2f7 0%, #ffffff 100%);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.login-container {
+  background: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 380px;
+  box-shadow: 0 6px 18px rgba(20,30,60,0.08);
+  text-align: left;
+}
+
+.login-container h1 {
+  margin: 0 0 18px 0;
+  font-size: 22px;
+  color: #222;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  color: #444;
+  font-size: 14px;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d6dbe0;
+  border-radius: 6px;
+  box-sizing: border-box;
+  margin-bottom: 14px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:hover { background-color: #0062cc; }
+
+.message { margin-top: 10px; color: #d9534f; text-align: center; }
+.message.success { color: #28a745; }
+
+.small { text-align: center; margin-top: 12px; font-size: 14px; }
+.small a { color: #007BFF; text-decoration: none; }
+.small a:hover { text-decoration: underline; }

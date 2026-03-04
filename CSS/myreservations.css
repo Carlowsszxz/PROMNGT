@@ -1,0 +1,26 @@
+
+/* My Reservations styles */
+.my-reservations{max-width:1000px;margin:28px auto;padding:18px}
+.summary-row{display:flex;gap:12px;margin-bottom:18px}
+.summary-item{background:#fff;padding:10px 14px;border-radius:8px;box-shadow:0 6px 18px rgba(2,6,23,0.04);font-weight:600}
+.lists-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+.list-panel{background:linear-gradient(180deg,#fff,#fbfdff);padding:12px;border-radius:10px;box-shadow:0 6px 18px rgba(2,6,23,0.04);min-height:160px}
+.list-panel.full{grid-column:span 3}
+.res-list{list-style:none;padding:0;margin:8px 0}
+.res-list li{display:flex;justify-content:space-between;align-items:center;padding:10px;border-radius:8px;background:rgba(15,23,42,0.03);margin-bottom:8px}
+.res-meta{display:flex;flex-direction:column}
+.res-title{font-weight:700}
+.res-sub{font-size:13px;color:#6b7280}
+.badge{padding:6px 8px;border-radius:8px;font-size:13px;font-weight:700}
+.badge-confirmed{background:rgba(16,185,129,0.12);color:#065f46}
+.badge-pending{background:rgba(249,115,22,0.08);color:#7c2d12}
+.badge-cancelled{background:rgba(239,68,68,0.08);color:#7f1d1d}
+.badge-expired{background:rgba(107,114,128,0.08);color:#374151}
+.action-group{display:flex;gap:8px}
+.action-btn{padding:8px 10px;border-radius:8px;border:none;cursor:pointer}
+.action-edit{background:transparent;border:1px solid rgba(37,99,235,0.12);color:#1e40af}
+.action-cancel{background:transparent;border:1px solid rgba(239,68,68,0.12);color:#ef4444}
+
+@media (max-width:900px){.lists-grid{grid-template-columns:1fr 1fr}.list-panel.full{grid-column:span 2}}
+@media (max-width:640px){.lists-grid{grid-template-columns:1fr}.list-panel.full{grid-column:span 1}}
+

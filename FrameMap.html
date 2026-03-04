@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Resource Map</title>
+  <link rel="stylesheet" href="CSS/frames.css">
+  <link rel="stylesheet" href="CSS/map.css">
+</head>
+<body>
+  <div class="map-page">
+    <header class="map-header">
+      <h1>Resource Map</h1>
+      <div class="map-controls">
+        <label>Type:
+          <select id="filterType">
+            <option value="all">All</option>
+            <option value="parking">Parking</option>
+            <option value="seat">Seat</option>
+            <option value="room">Room</option>
+          </select>
+        </label>
+        <label>Location:
+          <select id="filterLocation">
+            <option value="all">All</option>
+            <option value="Building A">Building A</option>
+            <option value="Building B">Building B</option>
+          </select>
+        </label>
+      </div>
+    </header>
+
+    <section class="legend">
+      <div><span class="dot free"></span> Free</div>
+      <div><span class="dot occupied"></span> Occupied</div>
+      <div><span class="dot pending"></span> Pending</div>
+    </section>
+
+    <section class="map-grid" id="mapGrid" aria-live="polite">
+      <!-- resources rendered here -->
+    </section>
+
+    <aside class="detail-panel" id="detailPanel" aria-hidden="true">
+      <button id="closeDetail" class="close-btn">×</button>
+      <h3 id="detailName">Resource Name</h3>
+      <p id="detailType">Type: </p>
+      <p id="detailLocation">Location: </p>
+      <p id="detailStatus">Status: </p>
+      <div class="detail-actions">
+        <button id="reserveResource" class="btn btn-primary">Reserve</button>
+      </div>
+    </aside>
+  </div>
+
+  <script src="JS/map.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+/* Analytics styles */
+.analytics-page{max-width:1100px;margin:28px auto;padding:18px}
+.charts{display:flex;gap:14px;flex-wrap:wrap}
+.chart-card{flex:1;min-width:320px;background:linear-gradient(180deg,#fff,#fbfdff);padding:14px;border-radius:10px;box-shadow:0 6px 18px rgba(2,6,23,0.04)}
+.insights{margin-top:16px;background:#fff;padding:14px;border-radius:10px;box-shadow:0 6px 18px rgba(2,6,23,0.04)}
+.insights-list{padding:10px}
+.insights-list .insight{padding:10px;border-radius:8px;background:rgba(15,23,42,0.03);margin-bottom:8px}
+.actions{margin-top:8px}
+
+@media(max-width:900px){.charts{flex-direction:column}}

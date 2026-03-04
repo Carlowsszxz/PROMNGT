@@ -1,0 +1,13 @@
+/* Profile page styles */
+.profile-page{max-width:820px;margin:28px auto;padding:18px}
+.profile-card{background:#fff;padding:18px;border-radius:10px;box-shadow:0 10px 30px rgba(2,6,23,0.06)}
+.profile-card label{display:block;margin-top:10px;font-size:14px;color:#0f172a}
+.profile-card input, .profile-card select{width:100%;padding:10px;border-radius:8px;border:1px solid #e6e9ef;margin-top:6px}
+.profile-card h3{margin-top:14px}
+.actions-row{display:flex;gap:10px;margin-top:14px}
+.small-muted{color:#6b7280}
+.btn{padding:10px 14px;border-radius:8px;border:none;cursor:pointer}
+.btn-primary{background:linear-gradient(180deg,#2563eb,#1e40af);color:#fff}
+.btn-secondary{background:transparent;border:1px solid rgba(37,99,235,0.12);color:#1e40af;padding:10px 12px;text-decoration:none;display:inline-flex;align-items:center}
+
+@media(max-width:640px){.actions-row{flex-direction:column}}

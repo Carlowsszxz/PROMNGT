@@ -1,0 +1,25 @@
+/* Admin panel styles */
+.admin-panel{max-width:1200px;margin:28px auto;padding:18px}
+.admin-grid{display:grid;grid-template-columns:2fr 1fr;gap:14px}
+.panel{background:linear-gradient(180deg,#fff,#fbfdff);padding:14px;border-radius:10px;box-shadow:0 6px 18px rgba(2,6,23,0.04)}
+.resource-mgmt .resource-controls{display:flex;gap:8px;align-items:center;margin-bottom:8px}
+.resource-table{width:100%;border-collapse:collapse}
+.resource-table th,.resource-table td{padding:10px;border-bottom:1px solid rgba(15,23,42,0.04)}
+.sensor-list{list-style:none;padding:0;margin:8px 0}
+.sensor-list li{padding:8px;border-radius:8px;background:rgba(15,23,42,0.03);margin-bottom:8px;display:flex;justify-content:space-between}
+.recent-res{list-style:none;padding:0;margin:8px 0}
+.analytics-links{list-style:none;padding:0}
+.analytics-links li{margin-bottom:8px}
+
+.modal{position:fixed;inset:0;background:rgba(2,6,23,0.4);display:none;align-items:center;justify-content:center}
+.modal[aria-hidden="false"]{display:flex}
+.modal-content{background:#fff;padding:18px;border-radius:10px;max-width:420px;width:100%;position:relative}
+.close-btn{position:absolute;right:10px;top:8px;border:none;background:transparent;font-size:20px;cursor:pointer}
+.actions-row{margin-top:12px}
+
+.badge{padding:6px 8px;border-radius:8px;font-weight:700}
+.s-free{background:rgba(16,185,129,0.12);color:#065f46}
+.s-occupied{background:rgba(239,68,68,0.12);color:#7f1d1d}
+.s-pending{background:rgba(245,158,11,0.08);color:#92400e}
+
+@media(max-width:900px){.admin-grid{grid-template-columns:1fr}.resource-mgmt{order:2}}

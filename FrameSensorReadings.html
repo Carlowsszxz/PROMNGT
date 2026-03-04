@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sensor Readings</title>
+  <link rel="stylesheet" href="CSS/frames.css">
+  <link rel="stylesheet" href="CSS/sensorreadings.css">
+</head>
+<body>
+  <div class="sensor-page">
+    <header>
+      <h1>Sensor Readings</h1>
+      <p class="small-muted">Inspect raw IoT sensor data for troubleshooting and validation.</p>
+    </header>
+
+    <section class="sr-filters">
+      <label>Sensor:
+        <select id="filterSensor"><option value="all">All</option></select>
+      </label>
+      <label>Resource:
+        <select id="filterResource"><option value="all">All</option></select>
+      </label>
+      <label>From: <input type="date" id="filterFrom"></label>
+      <label>To: <input type="date" id="filterTo"></label>
+      <input id="filterKeyword" type="search" placeholder="Search payload or sensor id">
+      <button id="exportCsv" class="btn">Export CSV</button>
+      <button id="exportJson" class="btn">Export JSON</button>
+      <button id="toggleGraph" class="btn">Graph View</button>
+    </section>
+
+    <section class="sr-table">
+      <table>
+        <thead>
+          <tr><th>Reading Time</th><th>Sensor ID</th><th>Resource</th><th>Value</th><th>Payload</th><th>Status</th></tr>
+        </thead>
+        <tbody id="readingsTbody"></tbody>
+      </table>
+    </section>
+
+    <section class="sr-pagination">
+      <button id="prevPage" class="btn">Prev</button>
+      <span id="pageInfo">Page 1</span>
+      <button id="nextPage" class="btn">Next</button>
+    </section>
+
+    <section id="graphSection" class="sr-graph" style="display:none">
+      <h3>Graph</h3>
+      <canvas id="readingsChart" width="900" height="240"></canvas>
+    </section>
+  </div>
+
+  <script src="JS/sensorreadings.js"></script>
+</body>
+</html>

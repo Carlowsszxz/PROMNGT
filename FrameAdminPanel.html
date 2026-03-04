@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="CSS/frames.css">
+  <link rel="stylesheet" href="CSS/adminpanel.css">
+</head>
+<body>
+  <div class="admin-panel">
+    <header>
+      <h1>Admin Panel</h1>
+      <p class="small-muted">Resource management, sensor health, reservations and analytics.</p>
+    </header>
+
+    <section class="admin-grid">
+      <div class="panel resource-mgmt">
+        <h3>Resources</h3>
+        <div class="resource-controls">
+          <button id="addResource" class="btn btn-primary">Add Resource</button>
+          <input id="searchResource" type="search" placeholder="Search resources">
+        </div>
+        <table class="resource-table" id="resourceTable">
+          <thead><tr><th>Name</th><th>Type</th><th>Location</th><th>Status</th><th>Actions</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <div class="panel sensor-panel">
+        <h3>Sensor Status</h3>
+        <ul id="sensorList" class="sensor-list"></ul>
+      </div>
+
+      <div class="panel reservations-panel">
+        <h3>All Reservations</h3>
+        <div class="res-actions"><button id="viewAllRes" class="btn">View Reservations</button></div>
+        <ul id="recentRes" class="recent-res"></ul>
+      </div>
+
+      <div class="panel analytics-panel">
+        <h3>Analytics</h3>
+        <ul class="analytics-links">
+          <li><a href="#">Occupancy Trends</a></li>
+          <li><a href="#">Peak Times</a></li>
+          <li><a href="#">Heatmaps</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- simple modal for add/edit resource -->
+    <div id="resourceModal" class="modal" aria-hidden="true">
+      <div class="modal-content">
+        <button id="closeModal" class="close-btn">×</button>
+        <h3 id="modalTitle">Add Resource</h3>
+        <label>Name</label>
+        <input id="modalName" type="text">
+        <label>Type</label>
+        <select id="modalType"><option value="parking">Parking</option><option value="seat">Seat</option><option value="room">Room</option></select>
+        <label>Location</label>
+        <input id="modalLocation" type="text">
+        <label>Status</label>
+        <select id="modalStatus"><option value="free">Free</option><option value="occupied">Occupied</option><option value="pending">Pending</option></select>
+        <div class="actions-row"><button id="saveResource" class="btn btn-primary">Save</button></div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="JS/adminpanel.js"></script>
+</body>
+</html>

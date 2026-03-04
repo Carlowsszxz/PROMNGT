@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Dashboard</title>
+	<link rel="stylesheet" href="CSS/frames.css">
+	<link rel="stylesheet" href="CSS/dashboard.css">
+</head>
+<body>
+	<div class="dashboard">
+		<header>
+			<div>
+				<h2 class="greeting">Welcome, <span id="userName">User</span>!</h2>
+				<p class="small-muted">This is your project dashboard.</p>
+			</div>
+			<div>
+				<button id="logout" class="logout-btn">Logout</button>
+			</div>
+		</header>
+
+		<section class="quick-stats">
+			<div class="stat">
+				<div class="stat-value" id="spotsCount">0</div>
+				<div class="stat-label">Available Spots</div>
+			</div>
+			<div class="stat">
+				<div class="stat-value" id="seatsCount">0</div>
+				<div class="stat-label">Available Seats</div>
+			</div>
+			<div class="stat">
+				<div class="stat-value" id="roomsCount">0</div>
+				<div class="stat-label">Available Rooms</div>
+			</div>
+			<div class="stat">
+				<div class="stat-value" id="activeReservations">0</div>
+				<div class="stat-label">Active Reservations</div>
+			</div>
+		</section>
+
+		<section class="main-grid">
+			<div class="panel upcoming">
+				<h3>Upcoming Reservations</h3>
+				<ul id="upcomingList" class="list"></ul>
+				<p id="noUpcoming" class="small-muted">No upcoming reservations.</p>
+			</div>
+
+			<div class="panel actions">
+				<h3>Quick Actions</h3>
+				<div class="action-row">
+					<button id="reserveBtn" class="btn btn-primary">Reserve a Spot/Seat/Room</button>
+					<button id="viewMapBtn" class="btn btn-secondary">View Map / Resource List</button>
+				</div>
+
+				<h3 style="margin-top:18px">Alerts / Notifications</h3>
+				<ul id="alertsList" class="alerts"></ul>
+			</div>
+		</section>
+	</div>
+
+	<script src="JS/dashboard.js"></script>
+</body>
+</html>

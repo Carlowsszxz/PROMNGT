@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Login</title>
+    <link rel="stylesheet" href="CSS/login.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Sign In</h1>
+        <form id="loginForm" autocomplete="on">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+
+        <p id="error-message" class="message"></p>
+        <div style="margin-top:12px;">
+            <button id="googleSignBtn" class="btn btn-secondary">Sign in with Google</button>
+        </div>
+        <p class="small">Don't have an account? <a href="FrameRegister.html" target="contentFrame">Create one</a></p>
+         
+    </div>
+
+       
+
+    </div>
+
+    <script type="module" src="JS/login.js"></script>
+</body>
+</html>

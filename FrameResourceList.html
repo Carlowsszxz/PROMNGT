@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Resources</title>
+  <link rel="stylesheet" href="CSS/frames.css">
+  <link rel="stylesheet" href="CSS/resourcelist.css">
+</head>
+<body>
+  <div class="resource-list-page">
+    <header class="rl-header">
+      <h1>Resources</h1>
+      <p class="small-muted">Browse and search available resources.</p>
+    </header>
+
+    <section class="rl-controls">
+      <input id="searchInput" type="search" placeholder="Search by name or keyword">
+      <select id="filterType"><option value="all">All types</option></select>
+      <select id="filterStatus"><option value="all">All status</option></select>
+      <select id="filterLocation"><option value="all">All locations</option></select>
+      <button id="clearFilters" class="btn">Clear</button>
+    </section>
+
+    <section class="rl-table">
+      <table>
+        <thead>
+          <tr><th>Name</th><th>Type</th><th>Location</th><th>Status</th><th>Actions</th></tr>
+        </thead>
+        <tbody id="resourceTbody"></tbody>
+      </table>
+    </section>
+  </div>
+
+  <script src="JS/resourcelist.js"></script>
+</body>
+</html>

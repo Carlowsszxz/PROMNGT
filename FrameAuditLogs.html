@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Audit Logs</title>
+  <link rel="stylesheet" href="CSS/frames.css">
+  <link rel="stylesheet" href="CSS/auditlogs.css">
+</head>
+<body>
+  <div class="audit-page">
+    <header>
+      <h1>Audit Logs</h1>
+      <p class="small-muted">View system events (logins, reservations, cancellations, admin edits, etc.).</p>
+    </header>
+
+    <section class="filters">
+      <label>Action:
+        <select id="filterAction"><option value="all">All</option></select>
+      </label>
+      <label>User:
+        <select id="filterUser"><option value="all">All</option></select>
+      </label>
+      <label>Resource:
+        <select id="filterResource"><option value="all">All</option></select>
+      </label>
+      <label>From: <input type="date" id="filterFrom"></label>
+      <label>To: <input type="date" id="filterTo"></label>
+      <input id="filterKeyword" type="search" placeholder="Keyword in details">
+      <label>Page size:
+        <select id="pageSize"><option>10</option><option>25</option><option>50</option></select>
+      </label>
+      <button id="clearFilters" class="btn">Clear</button>
+    </section>
+
+    <section class="log-table">
+      <table>
+        <thead>
+          <tr><th>Timestamp</th><th>User</th><th>Action</th><th>Resource</th><th>Details</th></tr>
+        </thead>
+        <tbody id="logsTbody"></tbody>
+      </table>
+    </section>
+
+    <section class="pagination">
+      <button id="prevPage" class="btn">Prev</button>
+      <span id="pageInfo">Page 1</span>
+      <button id="nextPage" class="btn">Next</button>
+    </section>
+  </div>
+
+  <script src="JS/auditlogs.js"></script>
+</body>
+</html>
